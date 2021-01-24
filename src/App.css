@@ -1,0 +1,263 @@
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Define vars for root elements */
+:root {
+  --main-bg-color: #ffffff;
+  --header-bg-color: blue;
+  --primary-color: blue;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* Button */
+.btn-default {
+  height: 35px;
+  font-size: .9rem !important;
+  font-size: 1rem;
+  font-weight: 700 !important;
+  color: var(--primary-color) !important;
+  background-color: #ffffff !important;
+  outline: none !important;
+  border: 2px solid var(--primary-color) !important;
+  border-radius: 17px !important;
+}
+
+.btn-default:hover{
+  background-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  outline: none !important;
+  transition: all ease-in 0.3s;
+}
+
+/* Header */
+header nav {
+  height: 20vh;
+  background-color: var(--header-bg-color) !important;
+  z-index: -1;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-size: 2.3rem !important;
+  margin-top: -14% !important;
+  padding-left: 15%;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+/* Paginatio */
+
+.page-link {
+  cursor: pointer;
+}
+
+/* MainLayout */
+
+.hero-section {
+  background-color: var(--main-bg-color);
+  z-index: 999;
+  padding: 35px;
+  width: 70%;
+  margin: -3% auto 5% 15%;
+  border: 1px solid rgb(240 235 235);
+}
+
+/* Home */
+
+.card:hover {
+  border-left: 3px solid var(--primary-color);
+  box-shadow: 1px 1px 2px -3px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px 3px 6px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 3px 6px -1px rgba(0, 0, 0, 0.75);
+}
+
+.user-icon i {
+  margin: auto;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.user-info h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.user-info h4 span {
+  font-size: 0.8rem;
+}
+
+/* UserPost */
+
+.post-title h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* PostDetails */
+
+.fa-arrow-left {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.fa-arrow-left:hover{
+  color: #000000;
+  font-size: 1.6rem;
+  transition: all ease-in-out 0.1s;
+}
+
+.delete-btn button{
+  outline: none;
+  font-size: 1.5rem;
+  background-color: #ffffff !important;
+  border: none;
+  color: var(--primary-color);
+  margin-top: -4%;
+}
+
+.delete-btn button:hover{
+  background-color: var(--primary-color) !important;
+  transition: all ease-in-out 0.1s;
+}
+
+.post-details {
+  padding: 25px;
+}
+
+.post-details img {
+  height: 300px;
+  width: 100%;
+}
+
+.post-details p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* ShowComments */
+
+.comments-user i {
+  padding: 10px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 2rem;
+}
+
+.comment-body{
+  margin: 15px auto;
+}
+
+.comments {
+  border-bottom: 1px solid #b9b0b0;
+}
+
+/* Loader */
+
+.loader {
+  border: 13px solid #f3f3f3;
+  border-top: 13px solid var(--primary-color); 
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.3rem !important;
+    font-weight: 500;
+  }
+
+  .hero-section {
+    padding: 25px;
+    width: 80%;
+    margin: -8% auto 5% 10%;
+  }
+
+  .hero-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .user-icon i {
+    margin: auto;
+    padding-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .user-info h4,
+  .fa-arrow-left {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .delete-btn button{
+    font-size: 1rem;
+  }
+
+  .post-title,
+  .post-body,
+  .comment-body {
+    font-size: 1rem !important;
+  }
+
+  .post-details img {
+    height: 180px;
+    width: 100%;
+  }
+
+  .delete-btn button{
+    outline: none;
+    background-color: #ffffff !important;
+    border: none;
+    color: var(--primary-color);
+    margin-top: -13%;
+  }
+
+  .show-comment-btn button{
+    margin: auto;
+  }
+
+  .comments-user {
+    text-align: center;
+  }
+
+  .comments-user i {
+    font-size: 1rem;
+    margin: 20px auto;
+  }
+
+  .comment-body{
+    font-size: 0.8rem !important;
+  }
+
+  .loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid var(--primary-color); 
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+}
